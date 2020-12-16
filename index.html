@@ -11,14 +11,18 @@
 
         <div id="root">
             <div id="to-do-wrapper">
-                <img id="logo" src="./assets/img/logo.png" alt="logo boolean">
-                <input type="text" v-model="newTask" @keyup.enter="addTask">
-                <button @click="addTask">Add</button>
+                <div class="image">
+                    <img id="logo" src="./assets/img/logo.png" alt="logo boolean">
+                </div>
+                <div class="aggingi-task">
+                    <input type="text" v-model="newTask" @keyup.enter="addTask">
+                    <button @click="addTask">Add</button>
+                </div>
                 <div id="to-do-list">
                     <h2>Todo List</h2>
                     <p v-if="noTasks">Nulla da fare!</p>
                     <ul class="tasks" v-else>
-                        <li v-for="(task, index) in tasks">{{task}} <i class="fas fa-times-circle" @click="deleteTask(index)"></i></li>
+                        <li v-for="(task, index) in tasks">{{task}} <i class="fas fa-times-circle fa-lg" @click="deleteTask(index)"></i></li>
                     </ul>
                 </div>
             </div>

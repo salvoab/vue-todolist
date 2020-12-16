@@ -4,7 +4,58 @@
     box-sizing: border-box;
 }
 
-#logo{
-    width: 300px;
+body{
+    font-family: sans-serif;
 }
 
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b0c4de;
+}
+
+div.image{
+    width: 230px;
+    text-align: center;
+}
+#logo{
+    width: 80%;
+}
+
+.aggingi-task{
+    margin: 14px 0;
+}
+.aggingi-task > * {
+    height: 28px;
+    border-radius: 10px;
+}
+.aggingi-task > input{
+    width: 75%;
+}
+.aggingi-task > button{
+    width: 23%;
+}
+
+#to-do-list > ul{
+    margin: 14px 0;
+    padding: 20px 14px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: #d3d3d3;
+}
+#to-do-list > ul > li{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+#to-do-list > p{
+    padding: 10px 0;
+    margin: 14px 0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #d3d3d3;
+}
