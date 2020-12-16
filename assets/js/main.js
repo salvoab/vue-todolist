@@ -13,6 +13,17 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
 let app = new Vue({
     el: '#root',
     data:{
-        tasks: ['Ripassare HTML', 'Ripassare CSS', 'Approfondire JS']
+        tasks: ['Ripassare HTML', 'Ripassare CSS', 'Approfondire JS'],
+        newTask: ''
+    },
+    methods: {
+        addTask(){
+            // Controllo su newTask e se rispetta i criteri allora lo aggiungo all'array di tasks
+            console.log(this.newTask);
+        },
+        deleteTask(position){
+            // Ricevo una posizione e elimino dall'array tasks il task corrispondente
+            console.log(position);
+        }
     }
 });
