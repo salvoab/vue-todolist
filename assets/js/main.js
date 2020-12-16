@@ -14,16 +14,23 @@ let app = new Vue({
     el: '#root',
     data:{
         tasks: ['Ripassare HTML', 'Ripassare CSS', 'Approfondire JS'],
-        newTask: ''
+        newTask: '',
+        noTasks: false
     },
     methods: {
         addTask(){
             // Controllo su newTask e se rispetta i criteri allora lo aggiungo all'array di tasks
-            console.log(this.newTask);
+            if(this.newTask.length > 4){
+                this.tasks.push(this.newTask);
+                this.noTasks = false;
+            }
         },
         deleteTask(position){
             // Ricevo una posizione e elimino dall'array tasks il task corrispondente
-            console.log(position);
+            this.tasks.splice(position, 1);
+            if(this.tasks.length === 0){
+                this.noTasks = true;
+            }
         }
     }
 });
