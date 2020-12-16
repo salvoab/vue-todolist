@@ -17,16 +17,21 @@ body{
     background-color: #b0c4de;
 }
 
+#to-do-wrapper{
+    width: 28%;
+}
 div.image{
-    width: 230px;
+    width: 100%;
     text-align: center;
 }
 #logo{
-    width: 80%;
+    width: 40%;
 }
 
 .aggingi-task{
     margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
 }
 .aggingi-task > * {
     height: 28px;
@@ -34,6 +39,11 @@ div.image{
 }
 .aggingi-task > input{
     width: 75%;
+}
+.aggingi-task > input:focus{
+    border-radius: 10px;
+    color: white;
+    background-color: #557bb2;
 }
 .aggingi-task > button{
     width: 23%;
@@ -50,6 +60,12 @@ div.image{
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
+}
+#to-do-list > ul > li > i{
+    cursor: pointer;
+}
+#to-do-list > ul > li > i:hover{
+    color: red;
 }
 
 #to-do-list > p{
