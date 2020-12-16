@@ -23,6 +23,7 @@ let app = new Vue({
             if(this.newTask.length > 4){
                 this.tasks.push(this.newTask);
                 this.noTasks = false;
+                this.newTask = '';
             }
         },
         deleteTask(position){
