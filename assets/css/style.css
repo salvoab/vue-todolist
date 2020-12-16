@@ -19,6 +19,7 @@ body{
 
 #to-do-wrapper{
     width: 28%;
+    font-size: 18px;
 }
 div.image{
     width: 100%;
@@ -34,11 +35,12 @@ div.image{
     justify-content: space-between;
 }
 .aggingi-task > * {
-    height: 28px;
+    height: 30px;
     border-radius: 10px;
 }
 .aggingi-task > input{
     width: 75%;
+    font-size: 18px;
 }
 .aggingi-task > input:focus{
     border-radius: 10px;
@@ -47,6 +49,7 @@ div.image{
 }
 .aggingi-task > button{
     width: 23%;
+    font-size: 18px;
 }
 
 #to-do-list > ul{
