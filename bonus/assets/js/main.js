@@ -14,6 +14,7 @@ BONUS:
 3 - Task spostabili todo-list e task completate cancellate spostandole su cestino
 4 - Task in cestino cancellabili definitivamente singolarmente
 5 - Cestino svuotabile
+6 - Task ripristinabili dal cestino verso le rispettive liste di partenza (todo oppure done)
 */
 
 let app = new Vue({
@@ -60,13 +61,23 @@ let app = new Vue({
                 this.tasksDone.splice(position, 1);
             }
             
-            this.recycleBin.push(task);
+            const binItem = {task, fromList};
+            this.recycleBin.push(binItem);
         },
         deletePermanently(position){
             this.recycleBin.splice(position, 1);
         },
         emptyBin(){
-            this.recycleBin.splice(0,this.recycleBin.length);
+            this.recycleBin.splice(0, this.recycleBin.length);
+        },
+        restoreTask(taskObject, position){
+            this.recycleBin.splice(position, 1);
+            if(taskObject.fromList === 'todo'){
+                this.tasks.push(taskObject.task);
+                this.noTasks = false;
+            } else {
+                this.tasksDone.push(taskObject.task);
+            }
         }
     }
 });

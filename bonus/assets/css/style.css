@@ -79,7 +79,7 @@ div.image{
 .icons-container > i.fa-times-circle:hover{
     color: red;
 }
-.icons-container > i.fa-check-circle:hover{
+.icons-container > i.fa-check-circle:hover, i.fa-trash-restore:hover{
     color: green;
 }
 

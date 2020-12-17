@@ -46,11 +46,12 @@
                     </div>
 
                     <div id="recycle-bin">
-                        <h2>Cestino <i class="fas fa-trash-alt fa-lg" @click="emptyBin"></i></h2>
+                        <h2>Cestino <i class="fas fa-trash-alt fa-sm" @click="emptyBin"></i></h2>
                         <ul class="tasks">
-                            <li v-for="(task, index) in recycleBin">
-                                <span>{{task}}</span>
+                            <li v-for="(item, index) in recycleBin">
+                                <span>{{item.task}}</span>
                                 <div class="icons-container">
+                                    <i class="fas fa-trash-restore fa-lg" @click="restoreTask(item, index)"></i>
                                     <i class="fas fa-times-circle fa-lg" @click="deletePermanently(index)"></i>
                                 </div>
                             </li>
