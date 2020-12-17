@@ -46,7 +46,7 @@
                     </div>
 
                     <div id="recycle-bin">
-                        <h2>Cestino</h2>
+                        <h2>Cestino <i class="fas fa-trash-alt fa-lg" @click="emptyBin"></i></h2>
                         <ul class="tasks">
                             <li v-for="(task, index) in recycleBin">
                                 <span>{{task}}</span>

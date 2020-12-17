@@ -12,7 +12,8 @@ BONUS:
 1 - Task della todo-list modificabile al click
 2 - Task della todo-list spostabili in Task completate
 3 - Task spostabili todo-list e task completate cancellate spostandole su cestino
-4 - Task in cestino cancellabili definitivamente
+4 - Task in cestino cancellabili definitivamente singolarmente
+5 - Cestino svuotabile
 */
 
 let app = new Vue({
@@ -63,6 +64,9 @@ let app = new Vue({
         },
         deletePermanently(position){
             this.recycleBin.splice(position, 1);
+        },
+        emptyBin(){
+            this.recycleBin.splice(0,this.recycleBin.length);
         }
     }
 });
