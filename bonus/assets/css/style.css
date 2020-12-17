@@ -18,7 +18,7 @@ body{
 }
 
 #to-do-wrapper{
-    width: 28%;
+    width: 50%;
     font-size: 18px;
 }
 div.image{
@@ -51,15 +51,20 @@ div.image{
     width: 23%;
     font-size: 18px;
 }
+/* Liste di task */
+#liste-task{
+    display: flex;
+    justify-content: space-between;
+}
 
-#to-do-list > ul{
+#liste-task > div > ul{
     margin: 14px 0;
     padding: 20px 14px;
     border-radius: 10px;
     list-style: none;
     background-color: #d3d3d3;
 }
-#to-do-list > ul > li{
+#liste-task > div > ul > li{
     display: flex;
     justify-content: space-between;
     padding: 8px 0;

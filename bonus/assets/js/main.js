@@ -15,6 +15,8 @@ let app = new Vue({
     el: '#root',
     data:{
         tasks: ['Ripassare HTML', 'Ripassare CSS', 'Approfondire JS'],
+        tasksDone: [],
+        recycleBin: [],
         newTask: '',
         noTasks: false
     },
