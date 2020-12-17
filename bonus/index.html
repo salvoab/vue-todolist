@@ -25,7 +25,10 @@
                         <ul class="tasks" v-else>
                             <li v-for="(task, index) in tasks">
                                 <span @click="modifyTask(task, index)">{{task}}</span>
-                                <i class="fas fa-times-circle fa-lg" @click="moveToBin(index, 'todo')"></i>
+                                <div class="icons-container">
+                                    <i class="fas fa-check-circle fa-lg" @click="moveToDone(index)"></i>
+                                    <i class="fas fa-times-circle fa-lg" @click="moveToBin(index, 'todo')"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -35,7 +38,9 @@
                         <ul class="tasks">
                             <li v-for="(task, index) in tasksDone">
                                 <span>{{task}}</span>
-                                <i class="fas fa-times-circle fa-lg" @click="moveToBin(index,'done')"></i>
+                                <div class="icons-container">
+                                    <i class="fas fa-times-circle fa-lg" @click="moveToBin(index,'done')"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -45,7 +50,9 @@
                         <ul class="tasks">
                             <li v-for="(task, index) in recycleBin">
                                 <span>{{task}}</span>
-                                <i class="fas fa-times-circle fa-lg" @click="deletePermanently(index)"></i>
+                                <div class="icons-container">
+                                    <i class="fas fa-times-circle fa-lg" @click="deletePermanently(index)"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>

@@ -44,6 +44,11 @@ let app = new Vue({
             this.deleteTask(position);
             this.newTask = task;
         },
+        moveToDone(position){
+            let task = this.tasks[position];
+            this.deleteTask(position);
+            this.tasksDone.push(task);
+        },
         moveToBin(position, fromList){
             let task = '';
             if(fromList === 'todo'){

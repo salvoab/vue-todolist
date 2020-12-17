@@ -69,12 +69,21 @@ div.image{
     justify-content: space-between;
     padding: 8px 0;
 }
-#liste-task > div > ul > li i:hover{
-    color: red;
+
+.icons-container{
+    margin-left: 10px;
+}
+.icons-container > i{
     cursor: pointer;
 }
+.icons-container > i.fa-times-circle:hover{
+    color: red;
+}
+.icons-container > i.fa-check-circle:hover{
+    color: green;
+}
 
-#to-do-list > ul > li > i, span{
+#to-do-list > ul > li > span{
     cursor: pointer;
 }
 
