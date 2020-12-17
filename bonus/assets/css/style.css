@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b0c4de;
+}
+
+#to-do-wrapper{
+    width: 28%;
+    font-size: 18px;
+}
+div.image{
+    width: 100%;
+    text-align: center;
+}
+#logo{
+    width: 40%;
+}
+
+.aggingi-task{
+    margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.aggingi-task > * {
+    height: 30px;
+    border-radius: 10px;
+}
+.aggingi-task > input{
+    width: 75%;
+    font-size: 18px;
+}
+.aggingi-task > input:focus{
+    border-radius: 10px;
+    color: white;
+    background-color: #557bb2;
+}
+.aggingi-task > button{
+    width: 23%;
+    font-size: 18px;
+}
+
+#to-do-list > ul{
+    margin: 14px 0;
+    padding: 20px 14px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: #d3d3d3;
+}
+#to-do-list > ul > li{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+#to-do-list > ul > li > i{
+    cursor: pointer;
+}
+#to-do-list > ul > li > i:hover{
+    color: red;
+}
+
+#to-do-list > p{
+    padding: 10px 0;
+    margin: 14px 0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #d3d3d3;
+}
