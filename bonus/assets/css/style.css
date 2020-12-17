@@ -70,8 +70,18 @@ div.image{
     padding: 8px 0;
 }
 
+#liste-task > div{
+    width: calc(100% / 3 - 20px);
+}
+#liste-task > div span{
+    display: block;
+    width: calc(100% - 64px);
+    word-wrap: break-word;
+}
+
 .icons-container{
     margin-left: 10px;
+    width: 58px;
 }
 .icons-container > i{
     cursor: pointer;
@@ -100,6 +110,7 @@ div.image{
 
 #recycle-bin > h2 > i{
     cursor: pointer;
+    margin-left: 100px;
 }
 #recycle-bin > h2 > i:hover{
     color: red;
