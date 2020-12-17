@@ -64,11 +64,14 @@ div.image{
     justify-content: space-between;
     padding: 8px 0;
 }
-#to-do-list > ul > li > i{
+#to-do-list > ul > li > i, span{
     cursor: pointer;
 }
 #to-do-list > ul > li > i:hover{
     color: red;
+}
+#to-do-list > ul > li > span:hover{
+    color: blue;
 }
 
 #to-do-list > p{
