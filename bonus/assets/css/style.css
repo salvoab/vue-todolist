@@ -18,7 +18,7 @@ body{
 }
 
 #to-do-wrapper{
-    width: 50%;
+    width: 55%;
     font-size: 18px;
 }
 div.image{
@@ -108,9 +108,18 @@ div.image{
     background-color: #d3d3d3;
 }
 
+#tasks-done .icons-container{
+    text-align: right;
+}
+
+#recycle-bin > h2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #recycle-bin > h2 > i{
     cursor: pointer;
-    margin-left: 100px;
+    margin-right: 10px;
 }
 #recycle-bin > h2 > i:hover{
     color: red;
