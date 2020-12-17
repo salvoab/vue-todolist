@@ -8,7 +8,11 @@ Cliccando sulla "X" l'utente puó cancellare una task
 Se non ci sono piu task nella lista, mostrate un messaggio tipo "Nulla da fare"
 Quando l'utente inserisce una task ha due modi per salvarla: o preme il pulsante add o preme il taso Enter della tastiera.
 Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri.
-BONUS: Task modificabile al click
+BONUS:
+1 - Task della todo-list modificabile al click
+2 - Task della todo-list spostabili in Task completate
+3 - Task spostabili todo-list e task completate cancellate spostandole su cestino
+4 - Task in cestino cancellabili definitivamente
 */
 
 let app = new Vue({
@@ -39,6 +43,21 @@ let app = new Vue({
         modifyTask(task, position){
             this.deleteTask(position);
             this.newTask = task;
+        },
+        moveToBin(position, fromList){
+            let task = '';
+            if(fromList === 'todo'){
+                task = this.tasks[position];
+                this.deleteTask(position);
+            } else if (fromList === 'done'){
+                task = this.tasksDone[position];
+                this.tasksDone.splice(position, 1);
+            }
+            
+            this.recycleBin.push(task);
+        },
+        deletePermanently(position){
+            this.recycleBin.splice(position, 1);
         }
     }
 });

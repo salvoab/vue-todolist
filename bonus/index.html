@@ -23,21 +23,30 @@
                         <h2>Todo List</h2>
                         <p v-if="noTasks">Nulla da fare!</p>
                         <ul class="tasks" v-else>
-                            <li v-for="(task, index) in tasks"><span @click="modifyTask(task, index)">{{task}}</span> <i class="fas fa-times-circle fa-lg" @click="deleteTask(index)"></i></li>
+                            <li v-for="(task, index) in tasks">
+                                <span @click="modifyTask(task, index)">{{task}}</span>
+                                <i class="fas fa-times-circle fa-lg" @click="moveToBin(index, 'todo')"></i>
+                            </li>
                         </ul>
                     </div>
 
                     <div id="tasks-done">
                         <h2>Tasks completate</h2>
                         <ul class="tasks">
-                            <li v-for="(task, index) in tasksDone"><span>{{task}}</span> <i class="fas fa-times-circle fa-lg" @click="deleteTask(index)"></i></li>
+                            <li v-for="(task, index) in tasksDone">
+                                <span>{{task}}</span>
+                                <i class="fas fa-times-circle fa-lg" @click="moveToBin(index,'done')"></i>
+                            </li>
                         </ul>
                     </div>
 
                     <div id="recycle-bin">
                         <h2>Cestino</h2>
                         <ul class="tasks">
-                            <li v-for="(task, index) in recycleBin"><span>{{task}}</span> <i class="fas fa-times-circle fa-lg" @click="deleteTask(index)"></i></li>
+                            <li v-for="(task, index) in recycleBin">
+                                <span>{{task}}</span>
+                                <i class="fas fa-times-circle fa-lg" @click="deletePermanently(index)"></i>
+                            </li>
                         </ul>
                     </div>
 

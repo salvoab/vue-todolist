@@ -69,16 +69,18 @@ div.image{
     justify-content: space-between;
     padding: 8px 0;
 }
+#liste-task > div > ul > li i:hover{
+    color: red;
+    cursor: pointer;
+}
+
 #to-do-list > ul > li > i, span{
     cursor: pointer;
 }
-#to-do-list > ul > li > i:hover{
-    color: red;
-}
+
 #to-do-list > ul > li > span:hover{
     color: blue;
 }
-
 #to-do-list > p{
     padding: 10px 0;
     margin: 14px 0;
